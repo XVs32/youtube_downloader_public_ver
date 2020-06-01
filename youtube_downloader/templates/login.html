@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="credit" content="getbootstrap.com and Bootstrap contributors">
+    <title>Signin</title>
+    
+    <!-- Bootstrap core CSS -->
+    <link href="/static/assets/dist/css/bootstrap.css" rel="stylesheet">
+    
+    
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="/static/css/signin.css" rel="stylesheet">
+    
+  </head>
+  
+  <body class="text-center d-flex flex-column h-100">
+    
+    
+    
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <a class="navbar-brand" href="/">yt downloader</a>
+      
+      <div class="collapse navbar-collapse" id="navbarsExample06">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="https://drive.google.com/">Google Drive</a>
+          </li>
+        </ul>
+        
+        <ul class="navbar-nav navbar-right">
+          <li class="nav-item">
+              <a class="nav-link" href="/register/">SignUp</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    
+    <form class="form-signin flex-fill" action="/login/try/" method="post"> 
+      <img class="mb-3" src="/static/assets/brand/Johnnie-Walker-Logo.png" alt="" width="256" height="256">
+      <h1 class="h2 mb-3 font-weight-normal">Please login</h1>
+      <input type="username" name="username" class="form-control" value="" placeholder="Username" required autofocus>
+      <input type="password" name="password" class="form-control" value="" placeholder="Password" required>
+      <input type="hidden" class="form-control" name="try_login" value=1> 
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+      {% if messages != 0 %}
+        <h1 class="h4 font-weight-lighter" style="color:red;">{{ messages }}</h1>
+      {% endif %}
+    </form>
+    
+    <footer class="footer mt-auto py-3">
+      <div class="container">
+        <span class="text-muted">Keep walking, Keep drinking</span>
+      </div>
+    </footer>
+  
+  
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="/static/assets/dist/js/bootstrap.bundle.js"></script>
+  </body>
+</html>
+

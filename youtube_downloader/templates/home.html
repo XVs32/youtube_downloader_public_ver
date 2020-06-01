@@ -1,0 +1,62 @@
+<!doctype html>
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="credit" content="getbootstrap.com and Bootstrap contributors">
+    <title>yt downloader</title>
+    
+    <!-- Bootstrap core CSS -->
+    <link href="/static/assets/dist/css/bootstrap.css" rel="stylesheet">
+    
+    
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="/static/css/signin.css" rel="stylesheet">
+    
+  </head>
+  
+  <body class="d-flex flex-column h-100">
+    
+    
+    
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+      <a class="navbar-brand" href="/">yt downloader</a>
+      
+      <div class="collapse navbar-collapse" id="navbarsExample06">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="https://drive.google.com/">Google Drive</a>
+          </li>
+        </ul>
+        <form class="form-group my-md-0 col-sm-6" action="/music_download/" method="post">
+          <input class="form-control" type="text" placeholder="ex. https://www.youtube.com/watch?v=e7GPuT15lTY" name="youtube_url" size="50" value="">
+        </form>
+        <ul class="navbar-nav navbar-right">
+          <li class="nav-item">
+              <a class="nav-link" href="/logout/">Logout</a>
+          </li>
+        </ul>
+        
+      </div>
+    </nav>
+    
+  </body>
+</html>
+

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="credit" content="getbootstrap.com and Bootstrap contributors">
+    <title>SignUp</title>
+    
+    <!-- Bootstrap core CSS -->
+    <link href="/static/assets/dist/css/bootstrap.css" rel="stylesheet">
+    
+    
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="/static/css/signin.css" rel="stylesheet">
+    
+  </head>
+  
+  <body class="d-flex flex-column h-100">
+    
+    
+    
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <a class="navbar-brand" href="/">yt downloader</a>
+      
+      <div class="collapse navbar-collapse" id="navbarsExample06">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="https://drive.google.com/">Google Drive</a>
+          </li>
+        </ul>
+        
+        <ul class="navbar-nav navbar-right">
+          <li class="nav-item">
+              <a class="nav-link" href="/login/">Login</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="flex-fill form-signin">
+      <div class="text-center">
+        <img class="mb-3" src="/static/assets/brand/home_is_where_the_wine_is.png" alt="" width="256" height="256">
+      </div>
+      <h1>Sign up</h1>
+      <form action="/register/add/" method="post"> 
+        {% csrf_token %}
+        <label>Userame*(letter/number/underscore only)</label><br />
+        <input type="text" class="form-control" name="username" pattern="^[0-9A-Za-z_]+$" required="required" value="" ><br />
+        <label>Password*(letter/number/underscore only)</label><br />
+        <input type="password" class="form-control" name="password" pattern="^[0-9A-Za-z_]+$" required="required" value=""> <br />
+        <label>Password confirmation*</label><br />
+        <input type="password" class="form-control" name="password_c" pattern="^[0-9A-Za-z_]+$" required="required" value=""> <br />
+        <label>Invite code*</label><br />
+        <input type="text" class="form-control" name="invite_code" pattern="^[0-9A-Za-z_']+$" required="required" value=""> <br />
+        <input class="btn btn-lg btn-primary btn-block" type="submit" value="Sign up" />
+        {% if messages != 0 %}
+          <h1 class="h4 font-weight-lighter" style="color:red;">{{ messages }}</h1>
+        {% endif %}
+      </form>
+    </div>
+  </body>
+</html>
