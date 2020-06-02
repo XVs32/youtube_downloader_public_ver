@@ -14,6 +14,16 @@
 ## Outline
 [TOC]
 
+* Revision record
+* Outline
+* Introduction
+* Dependency
+* Setup
+    * Build docker
+* How does it looks like
+    * SignUp page
+    * Home page
+
 ---
 ## Introduction
 
@@ -28,7 +38,7 @@ This is a youtube downloader with web interface, which download youtube video, c
 
 [Django](https://www.djangoproject.com/): A high-level Python Web framework.
 
-[youtube-dl](https://github.com/ytdl-org/youtube-dl): Download videos from youtube.com or other video platforms.
+[youtube-dl](https://github.com/ytdl-org/youtube-dl): Download videos from youtube or other video platforms.
 
 [ffmpeg](https://ffmpeg.org/): Convert video and audio.
 
@@ -47,13 +57,15 @@ This token allow ```gdrive``` to interacting with Google Drive. You could get yo
 * ***google drive folder id***: This is the google drive folder id which you could easily find in the url, when you open your google drive page. Please replace this id with the id in [view.py](https://github.com/XVs32/youtube_downloader_public_ver/blob/master/youtube_downloader/youtube_downloader/views.py), which sits after ```gdrive_folder = " --parent```. <br/>
 This [guide](https://ploi.io/documentation/mysql/where-do-i-get-google-drive-folder-id) tells you how to get your own folder id.
 
-* ***HTTPS***: This project does use HTTPS, so you would need to get your own HTTPS certificate. And replace them with ```.crt``` and ```.key``` under [youtube_downloader](https://github.com/XVs32/youtube_downloader_public_ver/tree/master/youtube_downloader).
+* ***HTTPS***: This project does use HTTPS, so you would need to get your own HTTPS certificate. And replace it with ```.crt``` and ```.key``` under [youtube_downloader](https://github.com/XVs32/youtube_downloader_public_ver/tree/master/youtube_downloader).
+
+* ***invite code***: The sign up process is block by a invite code, which sits in [view.py](https://github.com/XVs32/youtube_downloader_public_ver/blob/master/youtube_downloader/youtube_downloader/views.py) (near line 83), the default is ```welcome``` and I do recommend changing it to something else.
 
 
 
 ### Build docker
 
-As I said this project is packed by docker, so it should be rather simple to build a docker image by just using:  
+As I said before, this project is packed by docker, so it should be rather simple to build a docker image by just using:  
 ```docker build -t youtube_downloader .```  
 
 
@@ -63,4 +75,11 @@ Replace ```YOUR_PORT``` with the port you want to use.
 
 ---
 
+## How does it looks like
+
+### SignUp page
+![](https://i.imgur.com/SeY7RhC.png)
+
+### Home page
+![](https://i.imgur.com/THBYLFq.png)
 
